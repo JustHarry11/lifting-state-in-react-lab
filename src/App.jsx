@@ -9,6 +9,10 @@ const App = () => {
 
   const [stack, setStack]= useState([])
 
+  const addStack = (newStack) => {
+    setStack([...stack, newStack])
+  }
+
   const availableIngredients = [
     { name: 'Kaiser Bun', color: 'saddlebrown' },
     { name: 'Sesame Bun', color: 'sandybrown' },
@@ -31,7 +35,7 @@ const App = () => {
       <h1>Burger Stacker</h1>
       <section>
         <IngredientList availableIngredients={availableIngredients}/>
-        <BurgerStack />
+        <BurgerStack addStack={addStack}/>
       </section>
     </main>
   );

@@ -5,6 +5,8 @@ const IngredientList = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log(event.target) 
+        props.addStack(event.target)
     }
 
     return (
@@ -23,4 +25,3 @@ const IngredientList = (props) => {
   };
   
   export default IngredientList;
-  
