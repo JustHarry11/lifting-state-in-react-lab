@@ -14,8 +14,8 @@ const IngredientList = (props) => {
         {props.availableIngredients.map((availableIngredient, index) => {
             return (
                 <form key={index} onSubmit={handleSubmit}>
-                    <li>{availableIngredient.name}</li>
-                    <button type="submit">+</button>
+                    <li>{availableIngredient.name}<button type="submit">+</button></li>
+                    
                 </form>
         )
         })}
